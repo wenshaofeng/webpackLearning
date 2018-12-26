@@ -1,0 +1,15 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": { //根据targets 指定哪些语法编译，哪些语法不编译
+            "browsers": ["last 2 versions"],
+            // "chrome": "52"
+          }
+        }
+      ]
+    ],
+    "plugins": ["@babel/transform-runtime"]
+  }
+  
