@@ -22,13 +22,26 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           // 对于不提取为单独文件的css样式的loader
           fallback: {
-            loader: "style-loader"
+            loader: "style-loader",
+            options: {
+              singleton: true,
+            }
           },
           use: [
             {
               loader: "css-loader",
               options: {
                 minimize: true
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss', //表明插件是给postcss用的
+                plugins: [
+                  require('autoprefixer')(),
+                  require('postcss-cssnext')()
+                ]
               }
             },
             {
@@ -41,8 +54,11 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: "[name].min.css",
-      allChunks: false // 只包括初始化css, 不包括异步加载的CSS
+      filename: "[name].min.css", //提取出来的CSS
+      // 只包括初始化css, 不包括异步加载的CSS,将初始加载和异步加载的CSS区分开
+      allChunks: false
+
+
     })
   ]
 };
