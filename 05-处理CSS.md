@@ -151,3 +151,14 @@ module.exports = function(css) {
   }
 }
 ```
+
+##### 补充：minimize已经失效，改用 mini-css-extract-plugin
+```javascript
+{
+loader: “css-loader”,
+options: {
+minimize: true // css代码压缩
+}
+}
+minimize已经失效，改用 mini-css-extract-plugin
+```

@@ -9,5 +9,7 @@ body {
 html {
   background-color: $bgColor;
   transition: transform 1s;
-
+  font-size: 14px;
+  font-family: bold;
+  font-style: inherit;
 }
