@@ -150,3 +150,8 @@ module.exports = {
 
 打包过后，可以看到打包后的css文件中去掉了没有用到的样式类
 ![](https://upload-images.jianshu.io/upload_images/9249356-564600035367c015.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+**注1**：如果在 app.js 文件中 console.log('box-small')，那么最终打包的 css 文件里就会包含 .box-small 类。说明 PurifyCSS 插件只要在目标文件中匹配到了 css 选择器的文本，就会将该选择器打包到 css 文件，而不管文本的语义是否为元素的类名，甚至如果是注释里面包括了字符串 box-small，.box-small 类也会打包到的 css 文件里。
+
+**注2**：如果想要 CSS tree shaking，必须提取出 css 文件，若 css 和 app.js 打包到一起，即便设置了 purifyCss，也不会 tree shaking。

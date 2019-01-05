@@ -3,11 +3,9 @@
  * 2. webpack4下的scss懒加载: 详情见 './src/app.js'
  */
 const path = require("path");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-
   entry: {
     app: "./src/app.js"
   },
@@ -21,53 +19,44 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: [
-          // {
-          //   loader: "style-loader",
-          //   options: {
-          //     singleton: true,
-          //   }
-          // },
-          {
-            loader: MiniCssExtractPlugin.loader,
+        use: ExtractTextPlugin.extract({
+          // 对于不提取为单独文件的css样式的loader
+          fallback: {
+            loader: "style-loader",
             options: {
-              minimize: true
+              singleton: true,
             }
           },
-          {
-            loader: "css-loader",
-            options: {
-              minimize: true
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                minimize: true
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss', //表明插件是给postcss用的
+                plugins: [
+                  require('autoprefixer')(),
+                  require('postcss-cssnext')()
+                ]
+              }
+            },
+            {
+              loader: "sass-loader"
             }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss', //表明插件是给postcss用的
-              plugins: [
-                require('autoprefixer')(),
-              ]
-            }
-          },
-          {
-            loader: "sass-loader"
-          }
-        ]
+          ]
+        })
       }
     ]
   },
   plugins: [
-    /* new ExtractTextPlugin({
+    new ExtractTextPlugin({
       filename: "[name].min.css", //提取出来的CSS
       // 只包括初始化css, 不包括异步加载的CSS,将初始加载和异步加载的CSS区分开
       allChunks: false
-    }) */
-
-    new MiniCssExtractPlugin({
-      // 类似 webpackOptions.output里面的配置 可以忽略
-      filename: '[name].min.css',
-      chunkFilename: 'nice.css',
-    }),
-
+    })
   ]
 };
