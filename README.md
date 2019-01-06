@@ -1,5 +1,10 @@
 # webpack_learningDemo
 
+这是本人学习 webpack 的仓库 ， 结合了 慕课网 qbaty 老师的课程 [四大维度解锁 Webpack 前端工程化](https://coding.imooc.com/class/171.html)  和 大佬师弟 [dongyuanxing](https://github.com/dongyuanxin/webpack-demos) 所写的博客  
+**非常感谢上面两位**
+
+
+
 # Webpack 模块化概念
 
 ### 基本知识体系
