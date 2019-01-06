@@ -11,9 +11,9 @@ let extractTextPlugin = new ExtractTextPlugin({
   allChunks: false
 });
 
-// let spritesConfig = {
-//   spritePath: "./dist/static"
-// };
+let spritesConfig = {
+  spritePath: ""
+};
 
 module.exports = {
   entry: {
@@ -34,11 +34,11 @@ module.exports = {
             loader: 'url-loader',
             options: {
               name: "[name]-[hash:5].min.[ext]",
-              publicPath: "dist/",
-              outputPath: "dist/",
-              limit: 15360  // <15kb 的图片会被转换为 base64 编码格式
+              publicPath: "static/",
+              outputPath: "static/",
+              limit: 10000  // <15kb 的图片会被转换为 base64 编码格式
             }
-          }
+          },
           // {
           //   loader: "url-loader",
           //   options: {
@@ -48,16 +48,19 @@ module.exports = {
           //     outputPath: "static/"
           //   }
           // },
-          // {
-          //   loader: "img-loader",
-          //   options: {
-          //     plugins: [
-          //       require("imagemin-pngquant")({
-          //         quality: "80"
-          //       })
-          //     ]
-          //   }
-          // }
+          {
+            loader: "img-loader",
+            options: {
+              plugins: [
+                require("imagemin-pngquant")({
+                  quality: "80"
+                }),
+                require("imagemin-mozjpeg")({
+                  quality: "80"
+                })
+              ]
+            }
+          }
         ]
       },
       {
@@ -71,14 +74,13 @@ module.exports = {
               loader: "css-loader"
             },
             // 雪碧图
-            // {
-            //   loader: "postcss-loader",
-            //   // options: {
-            //   //   ident: "postcss",
-            //   //   plugins: [require('autoprefixer')(),]
-            //   //   // plugins: [require("postcss-sprites")(spritesConfig)]
-            //   // }
-            // }
+            {
+              loader: "postcss-loader",
+              options: {
+                ident: "postcss",
+                plugins: [require("postcss-sprites")(spritesConfig)]
+              }
+            }
           ]
         })
       }
