@@ -1,7 +1,7 @@
 # webpack_learningDemo
 
-这是本人学习 webpack 的仓库 ， 结合了 慕课网 qbaty 老师的课程 [四大维度解锁 Webpack 前端工程化](https://coding.imooc.com/class/171.html)  和 大佬师弟 [dongyuanxing](https://github.com/dongyuanxin/webpack-demos) 所写的博客  
-**非常感谢上面两位**
+这是本人学习 webpack 的代码和笔记仓库 ， 结合了 慕课网 qbaty 老师的课程 [四大维度解锁 Webpack 前端工程化](https://coding.imooc.com/class/171.html)  和 大佬师弟 [dongyuanxing](https://github.com/dongyuanxin/webpack-demos) 所写的博客  
+**非常感谢两位**
 
 
 
@@ -56,3 +56,6 @@ Let's go
 ##### [09-CSS Tree shaking](./09-CssTreeShaking.md)
 ##### [10-图片处理](./10-图片处理.md)
 ##### [11-字体处理](./11-字体文件.md)
+##### [12-第三方JS库](./12-处理第三方JS库.md)
+##### [13-自动生成HTML](./13-自动生成HTML.md)
+##### [14-CleanPlugin and Watch Mode](./14-CleanPluginAndWatchMode.md)
