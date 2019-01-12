@@ -1,7 +1,7 @@
 # webpack_learningDemo
 
-这是本人学习 webpack 的代码和笔记仓库 ， 结合了 慕课网 qbaty 老师的课程 [四大维度解锁 Webpack 前端工程化](https://coding.imooc.com/class/171.html)  和 大佬师弟 [dongyuanxing](https://github.com/dongyuanxin/webpack-demos) 所写的博客  
-**非常感谢两位**
+这是本人学习 webpack 的代码和笔记仓库 ， 结合了 慕课网 qbaty 老师的课程 [四大维度解锁 Webpack 前端工程化](https://coding.imooc.com/class/171.html)  和 大佬师弟 [dongyuanxing](https://github.com/dongyuanxin/webpack-demos) 所写的博客教程(开源)，
+**非常感谢两位** ， repository只是个人学习记录，更多详细的细节请学习上面两个课程
 
 
 
@@ -59,3 +59,4 @@ Let's go
 ##### [12-第三方JS库](./12-处理第三方JS库.md)
 ##### [13-自动生成HTML](./13-自动生成HTML.md)
 ##### [14-CleanPlugin and Watch Mode](./14-CleanPluginAndWatchMode.md)
+##### [15-webpack-dev-server](./15-webpack-dev-server.md)
