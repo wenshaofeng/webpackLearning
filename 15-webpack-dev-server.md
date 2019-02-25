@@ -9,6 +9,9 @@
 - 接口代理
 - 模块热更新(Hot Module Replacement ===> HMR) (HMR 不适用于生产环境，这意味着它应当只在开发环境使用。)
 
+### webpack-dev-server 的简易实现 
+sever.js 
+
 ### 使用webpack-dev-server
 方式一：`node_modules/.bin/webpack-dev-server --open`
 
@@ -93,6 +96,9 @@
 
 ![速度表](https://upload-images.jianshu.io/upload_images/9249356-97963e3e5a089eb6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+最佳实践：
+- devlopment环境的时候使用 cheap-module-eval-source-map
+- production环境的时候使用 cheap-module-source-map
 
 ### EsLint 检查代码格式
 

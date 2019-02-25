@@ -13,6 +13,7 @@ webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来
 3. ##### [webpack-安装踩坑](https://segmentfault.com/a/1190000014159004)
 
 ## webpack的核心概念
+![](https://upload-images.jianshu.io/upload_images/9249356-b2f1247e8715eea6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 - Entry
   - 代码的入口
   - 打包的入口 
@@ -31,6 +32,9 @@ webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来
   - 打包优化和压缩
   - 配置编译时的变量
   - 极其灵活
+- Resolving 
+  - 对项目进行模块解析
+  - 将项目跟webpack绑定(因此在 Node 环境下通常要设置环境变量 NODE_ENV)
 
 ### Entry
 ![](https://upload-images.jianshu.io/upload_images/9249356-787b7b9583184038.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -45,6 +49,9 @@ webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来
 ### Plugins
 ![](https://upload-images.jianshu.io/upload_images/9249356-7c3f200bfa79a813.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+### Resolving
+
+![](https://upload-images.jianshu.io/upload_images/9249356-b261069c1b0fd1f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## webpack的基本使用
