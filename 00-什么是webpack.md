@@ -67,9 +67,9 @@ webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来
 ##### [webpack打包错误 ERROR in multi ./src/main.js ./dist/bundle.js](https://www.jianshu.com/p/a55fb5bf75e1)
 
 ## webpack基本配置
-- #####webpack.config.js
+- ##### webpack.config.js
 ![](https://upload-images.jianshu.io/upload_images/9249356-f65c28cced16d77d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-- #####webpack-dev-server
+- ##### webpack-dev-server
 为了实现自动打包，监听代码变化
 ![](https://upload-images.jianshu.io/upload_images/9249356-47ae6c989f22df45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

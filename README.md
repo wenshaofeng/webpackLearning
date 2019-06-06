@@ -45,7 +45,7 @@ JS库====> MVC =====> MV*
 为了避免函数名的冲突，而采用的方式
 ![](https://upload-images.jianshu.io/upload_images/9249356-24eb3e4bb53d6ca0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### Commonjs
+#### Commonjs (动态导入)
 ![](https://upload-images.jianshu.io/upload_images/9249356-27fcda382a0545c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/9249356-c2117b59872b237e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -63,7 +63,7 @@ JS库====> MVC =====> MV*
 ![](https://upload-images.jianshu.io/upload_images/9249356-7af38d93ff4df7cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/9249356-547c3491fb8113dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-#### ESM
+#### ESM (静态导入)
 ![](https://upload-images.jianshu.io/upload_images/9249356-d00ac6876b6c62c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![](https://upload-images.jianshu.io/upload_images/9249356-82e7fde77d840ca1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -73,8 +73,8 @@ JS库====> MVC =====> MV*
 
 #### Webpack支持的
 - AMD（requireJS）
-- ES Modules（推荐的，原生支持）
-- CommonJS（node）
+- ES Modules（推荐的，原生支持）**注**tree shaking 只能使用 import 语法
+- CommonJS（node） 
 
 ### 介绍
 学习Webpack的代码仓库

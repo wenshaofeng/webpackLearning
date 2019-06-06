@@ -4,6 +4,8 @@
 #### JS 的 Tree Shaking
 >JS 的 `Tree Shaking` 依赖的是 ES2015 的模块系统（比如：`import`和 `export`）
 
+**注**：ES module是静态导入的方式、而如 node 的CommonJS 是动态导入的 ， Tree Shaking 只支持 静态导入 
+
 #### 不再需要`UglifyjsWebpackPlugin`
 在`webpack v4` 中，不再需要配置`UglifyjsWebpackPlugin`,
 只需要配置`mode`为"production"，即可显式激活 `UglifyjsWebpackPlugin` 插件。
@@ -36,3 +38,12 @@ js tree shaking 利用的是 es 的模块系统。而 lodash.js 没有使用 Com
 >注意
 
 第三方库注意其是不是有es或者common规范对应的版本: lodash和lodash-es
+
+
+
+#### 额外配置
+
+![](https://upload-images.jianshu.io/upload_images/9249356-949e9c03e33ff012.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+有时候，我们需要在 `package.json` 中配置一项 `sideEffects` 来排除不需要TreeShaking 作用的部分，如 import 的一些第三方库 babel-polyfill 和 css 文件
+如果没有，可设为false
