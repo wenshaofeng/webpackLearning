@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "imports-loader": "^0.8.0",
