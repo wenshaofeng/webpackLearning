@@ -3,6 +3,6 @@
     "webpack": "^4.15.1"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.19"
   }
 }
